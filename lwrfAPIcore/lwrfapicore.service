@@ -1,0 +1,14 @@
+[Unit]
+Description=LightwaveRF API
+
+[Service]
+ExecStart=/opt/lwrfAPIcore/lwrfAPIcore
+WorkingDirectory=/opt/lwrfAPIcore
+User=dotnetuser
+Group=dotnetuser
+Restart=on-failure
+SyslogIdentifier=lwrfAPIcore
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
